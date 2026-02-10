@@ -53,7 +53,7 @@ let to_alcotest
   let print = Raw.print_std in
   let name = T.get_name cell in
   let run () =
-    let call = Raw.callback ~colors ~verbose ~print_res:true ~print in
+    let call = Raw.callback ~colors ~verbose ~print_res:false ~print in
     T.check_cell_exn ~long ~call ~handler ~rand cell
   in
   ((name, speed_level, run) : unit Alcotest.test_case)
